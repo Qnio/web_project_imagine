@@ -1,0 +1,55 @@
+:root {
+  --color-primary-black: #1e1f20;
+  --color-primary-grey: #b6b6b6;
+  --color-primary-white: #ffffff;
+  --color-primary-yellow: #f8bb10;
+
+  --color-grey-light: #eee;
+
+  --color-secondary-light: #88cd3f;
+  --color-secondary-dark: #b6e95e;
+
+  --color-offer-2-light: #cbdee2;
+  --color-offer-2-dark: #b0cdd2;
+
+  --color-tertiary-light: #f1d1f6;
+  --color-tertiary-dark: #d8e0fc;
+
+  --font-primary: "Raleway", sans-serif;
+  --font-logo: "eightOne", sans-serif;
+  --font-primary-heading: "Montserrat", sans-serif;
+}
+// FONT VARIABLES
+@font-face {
+  font-family: "eightOne";
+  src: url("fonts/Eight_One.ttf") format("truetype");
+}
+
+$default-font-size: 1.6rem;
+
+// GRID
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-vertical-small: 6rem;
+$gutter-horizontal: 6rem;
+
+// COLORS
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+
+$color-secondary-light: #ffb900;
+$color-secondary-dark: #ff7730;
+
+$color-tertiary-light: #2998ff;
+$color-tertiary-dark: #5643fa;
+
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+
+$color-grey-dark: #777;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: #333;
+
+$color-white: #fff;
+$color-black: #000;
