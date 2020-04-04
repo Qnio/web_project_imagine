@@ -1218,9 +1218,9 @@ textarea {
       .navigation__brand {
         margin-left: 1rem; } }
     .navigation__brand-logo img {
-      max-width: 4rem;
-      max-height: 4rem;
-      animation-name: rotateRight;
+      max-width: 10rem;
+      max-height: 5rem;
+      animation-name: moveInLeft;
       animation-duration: 1s; }
     .navigation__brand-title {
       display: flex;

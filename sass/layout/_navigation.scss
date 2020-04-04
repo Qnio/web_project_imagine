@@ -21,10 +21,10 @@
     }
 
     &-logo img {
-      max-width: 4rem;
-      max-height: 4rem;
+      max-width: 10rem;
+      max-height: 5rem;
 
-      animation-name: rotateRight;
+      animation-name: moveInLeft;
       animation-duration: 1s;
     }
 
