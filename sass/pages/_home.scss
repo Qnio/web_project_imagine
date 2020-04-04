@@ -1,16 +1,3 @@
-.slide {
-  display: flex;
-  justify-content: space-evenly;
-  background-image: url(/img/my_desk_1440_680.png);
-  background-size: cover;
-  //background-color: grey;
-  height: 75vh;
-  margin-top: 3.5rem;
-}
-
-.yellow {
-  color: var(--color-primary-yellow);
-}
 /*
 /////////////////////////////////////////////////////
 ////////// MAIN BANNER SECTiON //////////////////////
@@ -96,52 +83,60 @@
 */
 
 .welcome {
-  position: relative;
-  background-image: url('../img/commercial_painting.jpg');
-  background-size: cover;
-  top: 0;
-  left: 10%;
-  width: 80%;
-  height: 60vh;
-  margin-top: 5rem;
-  padding: 10rem 0;
-  color: var(--color-primary-white);
-  //text-shadow: 6px 6px 6px #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 
-  &__title {
-    font-size: 6rem;
-    display: inline-block;
-    animation-name: fadeIn;
-    margin-top: 5%;
-    margin-left: 10rem;
-    animation-duration: 1s;
-    background-image: linear-gradient(
-      to right bottom,
-      rgba(63, 63, 63, 0.1),
-      rgba(63, 63, 63, 0.2)
-    );
-
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('../img/commercial_painting.jpg');
+    background-size: cover;
+    margin-top: 7%;
+    width: 80%;
+    height: 60vh;
+    color: var(--color-primary-white);
+    //text-shadow: 6px 6px 6px #ffffff;
     @include respond(phone) {
-      font-size: 4rem;
+      width: 100%;
+      padding: 2rem;
     }
-  }
-  &__subtitle {
-    width: 60%;
-    font-size: 3rem;
-    margin-left: 10rem;
-    animation-name: fadeIn;
-    animation-duration: 1s;
-    background-image: linear-gradient(
-      to right bottom,
-      rgba(63, 63, 63, 0.3),
-      rgba(63, 63, 63, 0.4)
-    );
-    @include respond(phone) {
+    &__title {
+      width: 60%;
+      margin-left: 5%;
+      font-size: 6rem;
+      animation-name: fadeIn;
+      animation-duration: 1s;
+      background-image: linear-gradient(
+        to right bottom,
+        rgba(63, 63, 63, 0.1),
+        rgba(63, 63, 63, 0.2)
+      );
+      @include respond(phone) {
+        width: 80%;
+        font-size: 4rem;
+      }
+    }
+    &__subtitle {
+      width: 60%;
+      margin-left: 5%;
       font-size: 3rem;
+      animation-name: fadeIn;
+      animation-duration: 1s;
+      background-image: linear-gradient(
+        to right bottom,
+        rgba(63, 63, 63, 0.3),
+        rgba(63, 63, 63, 0.4)
+      );
+      @include respond(phone) {
+        width: 80%;
+        font-size: 2.5rem;
+      }
     }
-  }
-  &__button {
-    margin-left: 10rem;
+    &__button {
+      margin-left: 5%;
+    }
   }
 }
 
@@ -167,7 +162,7 @@
   @include respond(phone) {
     margin-top: 5rem;
     padding: 1rem 3rem;
-    margin-bottom: 15rem;
+    margin-bottom: 1rem;
   }
 
   &__text {
@@ -189,21 +184,17 @@
 
     @include respond(phone) {
       margin: 0;
-      padding: 0;
+      padding: 4rem;
     }
 
     &-header-name {
+      margin-bottom: 5rem;
       font-size: 4.5rem;
       font-family: var(--font-primary-heading);
       font-weight: 300;
       line-height: 2rem;
       animation-name: moveInTop;
       animation-duration: 1s;
-    }
-    &-header-title {
-      font-size: 2.5rem;
-      font-weight: 600;
-      margin-bottom: 2.5rem;
     }
     &-header-story {
       line-height: 2.2rem;

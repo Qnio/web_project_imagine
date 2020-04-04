@@ -212,8 +212,14 @@ body {
 .u-padding-left-huge {
   padding-left: 14rem !important; }
 
+.u-padding-all-small {
+  padding: 2rem !important; }
+
 .u-padding-all-big {
   padding: 8rem !important; }
+
+.yellow {
+  color: var(--color-primary-yellow); }
 
 .btn:link,
 .btn:visited {
@@ -827,19 +833,27 @@ textarea {
     .services {
       display: flex;
       flex-direction: column; } }
-  @media (max-width: 56.25em) {
-    .services__item-1 {
-      order: 2; } }
+  .services__item-1 {
+    overflow: hidden; }
+    @media (max-width: 56.25em) {
+      .services__item-1 {
+        order: 2; } }
   .services__item-2 {
     padding: 10rem; }
     @media (max-width: 56.25em) {
       .services__item-2 {
         order: 1; } }
+    @media (max-width: 37.5em) {
+      .services__item-2 {
+        padding: 8rem; } }
   .services__item-3 {
     padding: 10rem; }
     @media (max-width: 56.25em) {
       .services__item-3 {
         order: 3; } }
+    @media (max-width: 37.5em) {
+      .services__item-3 {
+        padding: 8rem; } }
   @media (max-width: 56.25em) {
     .services__item-4 {
       order: 4; } }
@@ -851,20 +865,47 @@ textarea {
     @media (max-width: 56.25em) {
       .services__item-6 {
         order: 5; } }
+    @media (max-width: 37.5em) {
+      .services__item-6 {
+        padding: 8rem; } }
   .services__item-7 {
     padding: 10rem; }
     @media (max-width: 56.25em) {
       .services__item-7 {
         order: 7; } }
+    @media (max-width: 37.5em) {
+      .services__item-7 {
+        padding: 8rem; } }
   @media (max-width: 56.25em) {
     .services__item-8 {
       order: 8; } }
-  .services__img {
-    position: relative;
-    object-fit: cover;
+
+.feature {
+  overflow: hidden;
+  position: relative; }
+  .feature-img {
     width: 100%;
-    height: 50vh;
-    overflow: hidden; }
+    height: 100%;
+    transform: scale(1);
+    backface-visibility: hidden;
+    transition: all 0.5s; }
+  .feature-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s;
+    backface-visibility: hidden; }
+  .feature:hover .feature-caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .feature:hover .feature-img {
+    transform: translateX(-4rem) scale(1.4);
+    filter: blur(3px) brightness(80%); }
 
 .bg-video {
   position: absolute;
@@ -879,17 +920,6 @@ textarea {
     height: 100%;
     width: 100%;
     object-fit: cover; }
-
-.slide {
-  display: flex;
-  justify-content: space-evenly;
-  background-image: url(/img/my_desk_1440_680.png);
-  background-size: cover;
-  height: 75vh;
-  margin-top: 3.5rem; }
-
-.yellow {
-  color: var(--color-primary-yellow); }
 
 /*
 /////////////////////////////////////////////////////
@@ -954,39 +984,47 @@ textarea {
 /////////////////////////////////////////////////////
 */
 .welcome {
-  position: relative;
-  background-image: url("../img/commercial_painting.jpg");
-  background-size: cover;
-  top: 0;
-  left: 10%;
-  width: 80%;
-  height: 60vh;
-  margin-top: 5rem;
-  padding: 10rem 0;
-  color: var(--color-primary-white); }
-  .welcome__title {
-    font-size: 6rem;
-    display: inline-block;
-    animation-name: fadeIn;
-    margin-top: 5%;
-    margin-left: 10rem;
-    animation-duration: 1s;
-    background-image: linear-gradient(to right bottom, rgba(63, 63, 63, 0.1), rgba(63, 63, 63, 0.2)); }
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+  .welcome__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("../img/commercial_painting.jpg");
+    background-size: cover;
+    margin-top: 7%;
+    width: 80%;
+    height: 60vh;
+    color: var(--color-primary-white); }
     @media (max-width: 37.5em) {
-      .welcome__title {
-        font-size: 4rem; } }
-  .welcome__subtitle {
-    width: 60%;
-    font-size: 3rem;
-    margin-left: 10rem;
-    animation-name: fadeIn;
-    animation-duration: 1s;
-    background-image: linear-gradient(to right bottom, rgba(63, 63, 63, 0.3), rgba(63, 63, 63, 0.4)); }
-    @media (max-width: 37.5em) {
-      .welcome__subtitle {
-        font-size: 3rem; } }
-  .welcome__button {
-    margin-left: 10rem; }
+      .welcome__container {
+        width: 100%;
+        padding: 2rem; } }
+    .welcome__container__title {
+      width: 60%;
+      margin-left: 5%;
+      font-size: 6rem;
+      animation-name: fadeIn;
+      animation-duration: 1s;
+      background-image: linear-gradient(to right bottom, rgba(63, 63, 63, 0.1), rgba(63, 63, 63, 0.2)); }
+      @media (max-width: 37.5em) {
+        .welcome__container__title {
+          width: 80%;
+          font-size: 4rem; } }
+    .welcome__container__subtitle {
+      width: 60%;
+      margin-left: 5%;
+      font-size: 3rem;
+      animation-name: fadeIn;
+      animation-duration: 1s;
+      background-image: linear-gradient(to right bottom, rgba(63, 63, 63, 0.3), rgba(63, 63, 63, 0.4)); }
+      @media (max-width: 37.5em) {
+        .welcome__container__subtitle {
+          width: 80%;
+          font-size: 2.5rem; } }
+    .welcome__container__button {
+      margin-left: 5%; }
 
 /*
 /////////////////////////////////////////////////////
@@ -1008,7 +1046,7 @@ textarea {
     .about-container {
       margin-top: 5rem;
       padding: 1rem 3rem;
-      margin-bottom: 15rem; } }
+      margin-bottom: 1rem; } }
   .about-container__text {
     font-size: 1.4rem;
     text-align: left;
@@ -1027,18 +1065,15 @@ textarea {
     @media (max-width: 37.5em) {
       .about-container__text {
         margin: 0;
-        padding: 0; } }
+        padding: 4rem; } }
     .about-container__text-header-name {
+      margin-bottom: 5rem;
       font-size: 4.5rem;
       font-family: var(--font-primary-heading);
       font-weight: 300;
       line-height: 2rem;
       animation-name: moveInTop;
       animation-duration: 1s; }
-    .about-container__text-header-title {
-      font-size: 2.5rem;
-      font-weight: 600;
-      margin-bottom: 2.5rem; }
     .about-container__text-header-story {
       line-height: 2.2rem; }
       @media (max-width: 75em) {
@@ -1176,6 +1211,9 @@ textarea {
     align-items: center;
     margin-left: 8rem;
     padding: 1.5rem; }
+    @media (max-width: 37.5em) {
+      .navigation__brand {
+        margin-left: 1rem; } }
     .navigation__brand-logo img {
       max-width: 4rem;
       max-height: 4rem;
@@ -1192,7 +1230,8 @@ textarea {
       justify-content: center; }
       @media (max-width: 37.5em) {
         .navigation__brand-title {
-          display: none; } }
+          margin: 0 1rem;
+          padding-left: 1rem; } }
       .navigation__brand-title-large {
         font-size: 1.6rem;
         font-weight: 700;

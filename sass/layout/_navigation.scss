@@ -16,29 +16,16 @@
     margin-left: 8rem;
     padding: 1.5rem;
 
+    @include respond(phone) {
+      margin-left: 1rem;
+    }
+
     &-logo img {
       max-width: 4rem;
       max-height: 4rem;
-      // display: grid;
-      // grid-template: repeat(3, 1fr) / 1fr;
-      // font-family: var(--font-logo);
-      // font-size: 3rem;
-      // letter-spacing: 0.5rem;
-      // // max-width: 6rem;
-      // max-height: 6rem;
-      // margin-bottom: 1.2rem;
 
       animation-name: rotateRight;
       animation-duration: 1s;
-      // &-lower {
-      //   font-size: 1.1rem;
-      //   margin-top: -1rem;
-      // }
-      // &-lowest {
-      //   font-size: 1.1rem;
-      //   margin-top: -0.5rem;
-      //   text-align: end;
-      // }
     }
 
     &-title {
@@ -52,7 +39,9 @@
       justify-content: center;
 
       @include respond(phone) {
-        display: none;
+        //display: none;
+        margin: 0 1rem;
+        padding-left: 1rem;
       }
 
       &-large {
