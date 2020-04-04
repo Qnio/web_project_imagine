@@ -140,6 +140,9 @@ body {
   line-height: 9rem;
   margin-top: 20rem; }
 
+.text-small {
+  font-size: 1.5rem; }
+
 .heading-1, .heading-2, .heading-3 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400; }
