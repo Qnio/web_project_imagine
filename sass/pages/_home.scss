@@ -197,6 +197,7 @@
       animation-duration: 1s;
     }
     &-header-story {
+      font-size: 1.8rem;
       line-height: 2.2rem;
 
       @include respond(tab-land) {

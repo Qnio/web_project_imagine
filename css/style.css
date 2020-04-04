@@ -1054,6 +1054,7 @@ textarea {
       animation-name: moveInTop;
       animation-duration: 1s; }
     .about-container__text-header-story {
+      font-size: 1.8rem;
       line-height: 2.2rem; }
       @media (max-width: 75em) {
         .about-container__text-header-story {
