@@ -339,37 +339,37 @@
 
     <!-- PORTFOLIO SECTION-->
     <section class="section-portfolio">
-      <div class="section-portfolio__header">
-        <div class="section-portfolio__header-title">
-          Our recent work
+        <div class="section-portfolio__header">
+          <div class="section-portfolio__header-title">
+            Our recent work
+          </div>
+          <div class="section-portfolio__header-filter">
+            <ul class="section-portfolio__header-filter__list">
+              <li class="section-portfolio__header-filter__item interior">
+                <a class="section-portfolio__header-filter__link"
+                  >Interior</a
+                >
+              </li>
+              <li class="section-portfolio__header-filter__item">
+                <a class="section-portfolio__header-filter__link"
+                  >Exterior</a
+                >
+              </li>
+              <li class="section-portfolio__header-filter__item">
+                <a class="section-portfolio__header-filter__link"
+                  >Commercial</a
+                >
+              </li>
+              <li class="section-portfolio__header-filter__item">
+                <a class="section-portfolio__header-filter__link">All</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="section-portfolio__header-filter">
-          <ul class="section-portfolio__header-filter__list">
-            <li class="section-portfolio__header-filter__item">
-              <a href="#" class="section-portfolio__header-filter__link"
-                >Interior</a
-              >
-            </li>
-            <li class="section-portfolio__header-filter__item">
-              <a href="#" class="section-portfolio__header-filter__link"
-                >Exterior</a
-              >
-            </li>
-            <li class="section-portfolio__header-filter__item">
-              <a href="#" class="section-portfolio__header-filter__link"
-                >Commercial</a
-              >
-            </li>
-            <li class="section-portfolio__header-filter__item">
-              <a href="#" class="section-portfolio__header-filter__link">All</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <div class="gallery-container" id="portfolio">
-      <section class="gallery">
-        <figure class="gallery__item gallery__item--1">
+      </section>
+      <div class="gallery-container" id="portfolio">
+        <section class="gallery">
+        <!-- <figure class="gallery__item gallery__item--1">
           <img src="img/gal-1.png" alt="Gallery image 1" class="gallery__img" />
         </figure>
         <figure class="gallery__item gallery__item--2">
@@ -395,7 +395,7 @@
         </figure>
         <figure class="gallery__item gallery__item--9">
           <img src="img/gal-2.png" alt="Gallery image 9" class="gallery__img" />
-        </figure>
+        </figure> -->
         <!-- <figure class="gallery__item gallery__item--10">
           <img
             src="img/gal-6.png"
@@ -493,7 +493,7 @@
                 class="input"
                 type="text"
                 name="phone"
-                placeholder="Eg. +1 800 000000"
+                placeholder="Eg. +61 000 00 00 000"
               />
               <span class="focus-input"></span>
             </div>
@@ -544,10 +544,29 @@
        
     <!-- FOOTER-->
     <div class="footer">
-      <ul class="footer__list">
-        <li class="footer__item"></li>
-        <li class="footer__item"></li>
-      </ul>
+        <div class="footer__item"> 
+          <div class="footer__item-address">
+            <img
+            src="img/imagine_logo_grey.png"
+            alt="Imagine Painting"
+            class="footer__item-logo"
+          />
+        <div class="footer__item-address-title">
+            <p class="footer__item-address-title-large">
+                Address:
+            </p>
+            <p class="footer__item-address-title-small">
+                <p>34/56 Roomster Avenue</p>
+                <p>Paramatta</p>
+                <p>3000 NSW</p>
+                <p>Sydney</p>
+            </p>
+          </div>
+
+          </div>
+        </div>
+       
+        <div class="footer__item">Build By Piotr Kuniniec</div>
     </div>
     <!-- END  //FOOTER-->
 
@@ -555,51 +574,54 @@
     <div class="popup" id="popup">
       <div class="popup__content">
           <a href="#brand-baner" class="popup__close">&times;</a>
-          
-            <div class="popup__content-1 validate-form-input">
+          <img
+          src="img/logo_header.png"
+          alt="Imagine Painting"
+          />
+            <div class="validate-form-input">
               <span class="popup__content-label">Full Name</span>
               <input
                 type="text"
                 name="name"
-                class="input"
+                class="input-popup"
                 placeholder="Enter Full Name"
               />
               <span class="input-focus"></span>
             </div>
-
+            <br />
             <div
-              class="popup__content-2 validate-form-input"
+              class="validate-form-input"
               data-validate="Valid email is required"
             >
               <span class="popup__content-label">Email</span>
               <input
                 type="text"
                 name="email"
-                class="input"
+                class="input-popup"
                 placeholder="Enter email adress"
               />
               <span class="input-focus"></span>
             </div>
-
+            <br />
             <div
-              class="popup__content-3 validate-form-input"
+              class="validate-form-input"
               data-validate="Message is required"
             >
               <span class="popup__content-label">Message:</span>
               <textarea
                 type="text"
                 name="message"
-                class="input input-text"
+                class="input-popup input-text"
                 placeholder="Your message..."></textarea>
               </textarea>
               <span class="input-focus"></span>
             </div>
-
-            <div class="popup__content-4">
-                <button class="btn btn-black-form  u-margin-top-small">
+            <br />
+            <div class="container-contact-form-btn">
+                <button class="contact-form-btn">
                   <span>
                     Submit
-                    <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+                    <i class="zmdi zmdi-arrow-right m-l-8"></i>
                   </span>
                 </button>
               </div>
@@ -609,6 +631,6 @@
     </div>
 
     <!-- END  //POPUP CONTACT FORM-->
-    <!-- <script src="./bundle.js"></script> -->
+    <script src="./index.js"></script>
   </body>
 </html>
